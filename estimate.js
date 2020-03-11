@@ -32,6 +32,6 @@ console.log('== Estimated COV-19 infections in Finland ==')
 console.log('* Using data from', fnName)
 
 
-for(let i=daysSinceStart-3; i < daysSinceStart+14; i++) { 
-  console.log((new Date(epoch + day*i)).toISOString().substr(0,10), ~~covf(i+1), ((i === daysSinceStart-1)? 'today' : '')) 
+for(let i=daysSinceStart-3; i < daysSinceStart+14; i++) {
+  console.log((new Date(epoch + day*i)).toISOString().substr(0,10), ~~covf(i), ((i === daysSinceStart-1)? 'today' : ''))
 }
