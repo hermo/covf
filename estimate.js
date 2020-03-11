@@ -28,7 +28,7 @@ if (!covf) {
   process.exit(1)
 }
 
-console.log('== Estimated COV-19 infections in Finland ==')
+console.log('== Estimated SARS-CoV-2 infections in Finland ==')
 console.log('* Using data from', fnName)
 
 

@@ -1,4 +1,4 @@
-# Estimating COV-19 infection rates in Finland
+# Estimating SARS-CoV-2 infection rates in Finland
 
 ## Disclaimer
 
@@ -26,7 +26,7 @@ This repository may get updates when more data accumulates.
 ## Data from 2020-03-11
 
 ```
-== Estimated COV-19 infections in Finland ==
+== Estimated SARS-CoV-2 infections in Finland ==
 * Using data from 2020-03-11
 2020-03-09 31
 2020-03-10 40
