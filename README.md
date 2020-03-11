@@ -22,3 +22,27 @@ to generate the estimates.
 ## Updates
 
 This repository may get updates when more data accumulates.
+
+## Data from 2020-03-11
+
+```
+== Estimated COV-19 infections in Finland ==
+* Using data from 2020-03-11
+2020-03-09 40
+2020-03-10 52
+2020-03-11 67 today
+2020-03-12 87
+2020-03-13 113
+2020-03-14 146
+2020-03-15 189
+2020-03-16 244
+2020-03-17 315
+2020-03-18 408
+2020-03-19 527
+2020-03-20 680
+2020-03-21 879
+2020-03-22 1136
+2020-03-23 1467
+2020-03-24 1896
+2020-03-25 2449
+```
