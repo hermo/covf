@@ -46,3 +46,33 @@ This repository may get updates when more data accumulates.
 2020-03-25 3836
 2020-03-26 4599
 ```
+
+## Data source
+Using the open data provided by [HS-Datadesk](https://github.com/HS-Datadesk/koronavirus-avoindata)
+
+## Producing input data for the app
+
+```
+curl -o data.json https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+jq -r '.confirmed[].date' data.json | cut -c1-10 | sort | uniq -c | awk '{sum=sum+$1; print sum " " $1 " " $2}'
+```
+
+jq command output: (total, new, date)
+
+```
+1 1 2020-01-29
+2 1 2020-02-26
+3 1 2020-02-28
+6 3 2020-03-01
+7 1 2020-03-02
+12 5 2020-03-05
+15 3 2020-03-06
+19 4 2020-03-07
+24 5 2020-03-08
+33 9 2020-03-09
+40 7 2020-03-10
+65 25 2020-03-11
+109 44 2020-03-12
+```
+
+The first data point is skipped in the calculations as an outlier.
