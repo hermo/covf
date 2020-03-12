@@ -33,6 +33,13 @@ console.log('== Estimated SARS-CoV-2 infections in Finland ==')
 console.log('* Using data from', fnName)
 
 
+let prev=null
+
+console.log(`date\t\ttotal\tnew`)
 for(let i=daysSinceStart-3; i < daysSinceStart+14; i++) {
-  console.log((new Date(epoch + day*i)).toISOString().substr(0,10), ~~covf(i), ((i === daysSinceStart-1)? 'today' : ''))
+  const date = (new Date(epoch + day*i)).toISOString().substr(0,10)
+  const today = covf(i)
+  const delta = prev ? today-prev : 0
+  console.log(`${date}\t${~~today}\t+${~~delta} ${i === daysSinceStart-1 ? 'today' : ''}`)
+  prev = today
 }
